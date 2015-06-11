@@ -1,7 +1,7 @@
 cylinder_thickness = 0.5;
-flange_height = 1;
+flange_height = 2;
 flange_width = 0.8;
-diameter = 10.2;
+diameter = 10.2+0.2;
 bearing_width = 4;
 bearing_diameter = 10;
 margin = 0.2;
@@ -41,9 +41,11 @@ difference () {
 
 
 
-for (i = [0:17]) {
-	rotate ([0,0,360/18*i]) translate ([0,45,0]) flansza();
+
+for (i = [0:0]) {//0:17
+	rotate ([0,0,360/18*i]) translate ([0,47,0]) flansza();
 }
+
 //translate ([0,0,2*bearing_width]) mirror ([0,0,1]) half();
 
 module sroller() {
